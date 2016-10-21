@@ -1,0 +1,24 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-controller="cusfiltersController">
+    <h1 class="page-header">Customize Filters</h1>
+    <h4>Add Filter to Overview</h4><br>
+    <span>Choose method to apply filter to view</span>
+    <div class="radio">
+        <label><input type="radio" name="optradio" ng-click="addNewFilter()">Create new filter</label>
+    </div>
+    <div class="radio disable">
+        <label><input type="radio" name="optradio" disabled>Apply existing filter</label>
+    </div>
+
+    <div class="cusfilter_infor" ng-if="showInfo">
+        <p>Filter Information</p>
+        <span>Filter Name</span><br>
+        <input id="inputValue" type="text" class="col-md-3" placeholder="add your filter name here" ng-model="newFilterName"><br>
+        <div style="padding-top: 20px">
+            <p ng-if="showNotice">Notice: Input is wrong!!!!</p>
+            <p ng-if="showWrong">Ops, can not connect to service.</p>
+            <button type="button" class="btn bg-primary" ng-click="submitFilterName()">Save</button>
+        <button type="button" class="btn btn-secondary" ng-click="cancelFilter()">Cancel</button>
+        </div>
+    </div>
+
+</div>

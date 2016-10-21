@@ -1,0 +1,22 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-controller="overviewController">
+    <h1 class="page-header">Overview</h1>
+<div>
+    <div class="filter_section">
+       <div style="padding-bottom: 20px;">
+           <span class="col-md-3" id="search_Filter"><input type="text" class="form-control" placeholder="Filter..." ng-model="searchText"></span>
+       </div>
+
+    </div>
+    <table id="searchTextResults" class="table">
+        <tr>
+            <th>Title</th>
+            <th>#</th>
+        </tr>
+        <tr ng-repeat="newValue in analyticsData | filter:searchText | filter:myFilter">
+            <td>{{newValue.title}}</td>
+            <td>{{newValue.num}}</td>
+        </tr>
+    </table>
+</div>
+
+</div>
