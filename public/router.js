@@ -8,31 +8,31 @@ trackingApp.config(['$routeProvider', function ($routeProvider){
         .when('/',
         {
             controller:'overviewController',
-            templateUrl:'overview.html'
+            templateUrl:'scripts/overview.html'
         })
         .when('/overview',
         {
             controller:'overviewController',
-            templateUrl:'overview.html'
+            templateUrl:'scripts/overview.html'
         })
         .when('/analytics',
         {
             controller:'analyticsController',
-            templateUrl:'analytics.html'
+            templateUrl:'scripts/analytics.html'
         })
         .when('/help',
         {
-            templateUrl:'help.html'
+            templateUrl:'scripts/help.html'
         })
         .when('/cusfilters',
         {
             controller:'cusfiltersController',
-            templateUrl:'cusfilters.html'
+            templateUrl:'scripts/cusfilters.html'
         })
         .when('/importExport',
         {
             controller:'importExportController',
-            templateUrl:'importExport.html'
+            templateUrl:'scripts/importExport.html'
         })
         .otherwise({redirectTo:'/'});
 

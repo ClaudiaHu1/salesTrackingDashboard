@@ -79,7 +79,7 @@ body {
 }
 
 #search_Filter {
-    float: right;
+    float: left;
 }
 
 .filter_section {
@@ -88,4 +88,9 @@ body {
 
 .cusfilter_infor {
     padding-top: 20px;
+}
+
+#downLoad{
+    float: right;
+    text-decoration:none !important;
 }

@@ -4,9 +4,12 @@
     <div class="filter_section">
        <div style="padding-bottom: 20px;">
            <span class="col-md-3" id="search_Filter"><input type="text" class="form-control" placeholder="Filter..." ng-model="searchText"></span>
-       </div>
 
+       </div>
+        <!--<button export-to-csv>Download</button>-->
+        <a class="fa fa-download" id="downLoad" ng-click="exportData()"></a>
     </div>
+    <div id="downloadCsv">
     <table id="searchTextResults" class="table">
         <tr>
             <th>Title</th>
@@ -17,6 +20,7 @@
             <td>{{newValue.num}}</td>
         </tr>
     </table>
+    </div>
 </div>
 
 </div>
