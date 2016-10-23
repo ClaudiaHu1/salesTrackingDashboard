@@ -1,0 +1,14 @@
+{
+  "name": "bower install",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "public/**/bower_components"
+  ],
+  "dependencies":{
+    "file-saver": "https://github.com/eligrey/FileSaver.js.git",
+    "highcharts": "git@github.com:highcharts/highcharts.git",
+    "font-awesome": "git@github.com:FortAwesome/Font-Awesome.git"
+  }
+}

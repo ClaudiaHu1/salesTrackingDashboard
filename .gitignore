@@ -3,3 +3,4 @@ node_modules
 *.iml
 .project
 dist
+public/bower_components
