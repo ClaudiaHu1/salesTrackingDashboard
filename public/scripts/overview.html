@@ -1,25 +1,55 @@
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-controller="overviewController">
-    <h1 class="page-header">Overview</h1>
-<div>
-    <div class="filter_section">
-       <div style="padding-bottom: 20px;">
-           <span class="col-md-3" id="search_Filter"><input type="text" class="form-control" placeholder="Filter..." ng-model="searchText"></span>
 
-       </div>
-        <!--<button export-to-csv>Download</button>-->
-        <a class="fa fa-download" id="downLoad" ng-click="exportData()"></a>
+    <h1 class="page-header page-header-overview">Overview</h1>
+    <span class="col-md-3 input-filter"><input type="text" class="form-control" placeholder="Filter..."
+                                               ng-model="searchText"></span>
+    <hr style="margin-top: 48px">
+    <div>
+        <div style="padding-top: 10px">
+            <a class="fa fa-download table-icon" id="download-icon" ng-click="exportData()"></a>
+            <a class="fa  fa-filter table-icon" data-toggle="modal" data-target="#filterModal"></a>
+        </div>
+        <div id="downloadCsv">
+            <table id="searchTextResults" class="table table-position">
+                <tr>
+                    <th>Title</th>
+                    <th>#</th>
+                </tr>
+                <tr ng-repeat="newValue in analyticsData | filter:searchText | filter:myFilter">
+                    <td>{{newValue.title}}</td>
+                    <td>{{newValue.num}}</td>
+                </tr>
+            </table>
+        </div>
     </div>
-    <div id="downloadCsv">
-    <table id="searchTextResults" class="table">
-        <tr>
-            <th>Title</th>
-            <th>#</th>
-        </tr>
-        <tr ng-repeat="newValue in analyticsData | filter:searchText | filter:myFilter">
-            <td>{{newValue.title}}</td>
-            <td>{{newValue.num}}</td>
-        </tr>
-    </table>
+</div>
+
+<div class="modal fade" id="filterModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Filter Table</h4>
+            </div>
+            <div class="modal-body">
+                <span>Filter By</span>
+                <form>
+                    <div class="checkbox">
+                        <label class="check-label"><input type="checkbox" value="">All (Default)</label>
+                        <label class="check-label"><input type="checkbox" value="">Sales Source</label>
+                        <label class="check-label"><input type="checkbox" value="">Sales Week</label>
+                        <label class="check-label"><input type="checkbox" value="">Total Sales</label>
+                        <label class="check-label"><input type="checkbox" value="">NO. of Visiting</label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" data-dismiss="modal" ng-click="saveFilter()">Submit</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
     </div>
 </div>
 

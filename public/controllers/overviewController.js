@@ -24,6 +24,10 @@ function overviewController($scope,shareDataFilter){
     $scope.hideWeekTable = true;
     $scope.hideSaleTable = true;
 
+    $scope.saveFilter=function(){
+
+    }
+
 }
 
 trackingApp.service('shareDataFilter', shareDataFilter);

@@ -67,6 +67,11 @@ body {
     margin-top: 0;
 }
 
+.page-header-overview{
+    position: relative;
+    float: left;
+}
+
 .placeholders {
     margin-bottom: 30px;
     text-align: center;
@@ -78,19 +83,34 @@ body {
     margin-bottom: 20px;
 }
 
-#search_Filter {
-    float: left;
-}
-
-.filter_section {
+.filter-section {
     padding-bottom: 25px;
 }
 
-.cusfilter_infor {
+.cusfilter-infor {
     padding-top: 20px;
 }
 
-#downLoad{
+.table-icon{
     float: right;
     text-decoration:none !important;
+}
+
+#download-icon{
+    padding-left: 10px;
+}
+
+.input-filter{
+    position: absolute;
+    float: right;
+    margin-left: 56%;
+    margin-top: 6px;
+}
+
+.table-position{
+    margin-top: 20px;
+}
+
+.check-label{
+    padding-right: 10px;
 }
