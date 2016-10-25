@@ -1,7 +1,10 @@
 {
   "name": "saleTrackingDashboard",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "Sale and Tracking Dashboard Demo",
+  "engines": {
+    "node": "6.9.1"
+  },
   "main": "app.js",
   "dependencies": {
     "angular": "github:angular/bower-angular@^1.5.7",
@@ -9,11 +12,15 @@
     "angular-route":"git@github.com:angular/bower-angular-route.git",
     "bootstrap": "git@github.com:twbs/bootstrap.git",
     "compression": "git@github.com:expressjs/compression.git",
-    "express": "git@github.com:expressjs/express.git",
+    "express": "^4.13.3",
     "express-http-proxy": "^0.6.0",
     "express-request-proxy": "^2.0.0",
     "request-promise": "^3.0.0",
     "serve-static": "^1.10.2",
     "stripe":"git@github.com:stripe/stripe-node.git"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ClaudiaHu1/salesTrackingDashboard.git"
   }
 }
