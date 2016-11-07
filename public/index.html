@@ -18,6 +18,9 @@
     <script src="controllers/overviewController.js"></script>
     <script src="controllers/cusfiltersController.js"></script>
     <script src="controllers/importExportController.js"></script>
+    <script src="controllers/loginController.js"></script>
+    <script src="controllers/myprofileController.js"></script>
+
     <script src="https://js.stripe.com/v2/"></script>
 
     <script src="../library/jquery-3.1.1.min.js"></script>
@@ -41,6 +44,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#">Tracking Dashboard</a>
+            <a ng-controller="loginController" class="navbar-brand" href="#">test</a>
         </div>
     </div>
 </nav>
@@ -54,6 +58,7 @@
                 <li><a href="#/analytics">Analytics</a></li>
                 <li><a href="#/cusfilters">Customize Filters</a></li>
                 <li><a href="#/importExport">Import</a></li>
+                <li><a href="#/myprofile">My Profile</a></li>
                 <li><a href="#/help">Help</a></li>
 
             </ul>

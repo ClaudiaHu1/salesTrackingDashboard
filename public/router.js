@@ -34,6 +34,16 @@ trackingApp.config(['$routeProvider', function ($routeProvider){
             controller:'importExportController',
             templateUrl:'scripts/importExport.html'
         })
+        .when('/login',
+        {
+            controller:'loginController',
+            templateUrl:'scripts/login.html'
+        })
+        .when('/myprofile',
+        {
+            controller:'myprofileController',
+            templateUrl:'scripts/myprofile.html'
+        })
         .otherwise({redirectTo:'/'});
 
 }]);
