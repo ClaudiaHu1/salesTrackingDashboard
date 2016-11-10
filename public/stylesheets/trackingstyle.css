@@ -114,3 +114,7 @@ body {
 .check-label{
     padding-right: 10px;
 }
+
+.loginClass{
+    cursor: pointer;
+}

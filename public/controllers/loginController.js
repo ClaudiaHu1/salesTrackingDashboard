@@ -5,6 +5,17 @@
 trackingApp.controller('loginController', loginController);
 
 
-function loginController($scope){
+function loginController($scope,$window){
+    var password = "123123";
+    var username = "Ace";
+    $scope.validLogin = function(){
+        //if(){
+        //
+        //}
+    },
+
+    $scope.signOnFunc = function(){
+        $window.location.href = 'index.html#/myprofile';
+    }
 
 }

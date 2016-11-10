@@ -6,5 +6,5 @@ trackingApp.controller('myprofileController', myprofileController);
 
 
 function myprofileController($scope){
-
+    $scope.myProfile = {};
 }
